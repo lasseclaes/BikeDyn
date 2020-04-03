@@ -1,0 +1,101 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    padding: 1rem;
+    background: #f2efea;
+}
+
+header ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    color: darkgray;
+    font-size: 25px;
+}
+
+header li {
+    color: brown;
+    display: inline;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+}
+
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    /* Keep adding new columns - even if theres is no content for them. content does not always take up full width */
+    /*    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    /* Don't add more columns than theres is content for. && +content "always" take full width */
+    padding: 10px;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5rem;
+}
+
+.line {
+    grid-column: 1/-1;
+    height: 2px;
+    background: darkgray;
+}
+
+.box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    padding: 1rem
+}
+
+article {
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    background: white;
+}
+
+
+article h1 {
+    text-transform: uppercase;
+    color: darkgray;
+    letter-spacing: 3px;
+}
+
+article p {
+    font-style: italic;
+    color: darkgray;
+}
+
+article > img {
+    order: -1;
+    align-self: center;
+    width: 100%;
+    height: auto;
+    opacity: 80%;
+}
+
+
+
+article > button {
+
+    margin-top: auto;
+    background: white;
+    color: brown;
+    padding: 0.5rem;
+    border: 1px solid brown;
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+article > button:hover {
+    background: rgba(128, 128, 128, 0.2);
+    cursor: pointer;
+}
